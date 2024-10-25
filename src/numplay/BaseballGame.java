@@ -43,7 +43,7 @@ public class BaseballGame {
     }
 
 
-    public int play() {
+    public int play() { //게임을 플레이
         Scanner scan = new Scanner(System.in);
         int attempts = 0;
         while (true) {
@@ -73,6 +73,7 @@ public class BaseballGame {
         return attempts;
     }
 
+    // 받아온 값이 올바른 값인지 확인
     private boolean validateInput(String input) {
         if (input.length() != level || !input.matches("\\d{" + level + "}")) {
             return false;
@@ -88,6 +89,7 @@ public class BaseballGame {
 
     }
 
+    //받아온 값이 스트라이크인지 확인
     private int countStrike(String input) {
         int strike=0;
         for (int i=0; i < level; i++ ) {
@@ -100,6 +102,7 @@ public class BaseballGame {
         return strike;
     }
 
+    //받아온 값이 볼인지 확인
     private int countBall(String input) {
         int ball=0;
         for (int i=0; i < level; i++ ) {
